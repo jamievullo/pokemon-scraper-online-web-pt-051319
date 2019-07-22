@@ -24,7 +24,7 @@ class Pokemon
     sql = <<-SQL
       SELECT * FROM pokemon WHERE id = ?;
     SQL
-    pokemon = db.execute(sql, id)#.first
+    pokemon = db.execute(sql, id).first
     Pokemon.new(id: pokemon[0], name: pokemon[1], type: pokemon[2], db: db)
   end
 
