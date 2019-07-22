@@ -2,14 +2,14 @@ class Pokemon
   
   attr_accessor :name, :type, :id, :db
   
-  @@all =[]
+  #@@all =[]
   
   def initialize(name, type, id, db)
     @name = name
     @type = type
     @id = id
     @db = db
-    @@all << self 
+    #@@all << self 
   end
   
   def self.save(name, type, db)
